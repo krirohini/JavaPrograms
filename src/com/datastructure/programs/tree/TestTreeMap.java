@@ -1,4 +1,4 @@
-package com.datastructure.programs.tree;
+package com.datastructur.programs.tree;
 
 import java.util.Map;
 import java.util.TreeMap;

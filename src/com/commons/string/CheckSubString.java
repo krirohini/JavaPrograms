@@ -15,7 +15,7 @@ public class CheckSubString {
 				System.out.println("NO"); // continue;
 			}*/
 		}
-		return false;
+		return true;
 	}
 
 	public static void main(String[] args) {

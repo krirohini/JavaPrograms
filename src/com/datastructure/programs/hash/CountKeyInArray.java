@@ -20,14 +20,13 @@ public class CountKeyInArray {
 			}
 		}
 		
-		System.out.println(myMap);
-		
+		System.out.println(myMap);		
 	}
 	
 	
 	
 	public static void main(String[] args) {
-		int b[] = {1,3,2,2,4};
+		int b[] = {1,3,2,2,4,1,3,3,4,3};
 		CountKeyInArray obj = new CountKeyInArray();
 		obj.countKey(b);
 		

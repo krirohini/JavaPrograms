@@ -1,4 +1,4 @@
-package com.datastructure.programs.tree;
+package com.datastructur.programs.tree;
 
 //Binary Search Tree Implementation 
 /**  FQA for INTERVIEWS

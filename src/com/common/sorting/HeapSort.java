@@ -1,7 +1,9 @@
 package com.common.sorting;
 
 public class HeapSort {	
+	
 	public static int heapSize ;	
+	
 	public void MAX_HEAPIFY (int a[]) {		
 		int left = 0 ;
 		int right = 0 ;				

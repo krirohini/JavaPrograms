@@ -1,8 +1,5 @@
 package com.commons.string;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class NonReducibleFormString {
 	
 	//Super Reduced String

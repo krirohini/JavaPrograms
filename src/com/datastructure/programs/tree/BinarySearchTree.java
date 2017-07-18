@@ -1,4 +1,4 @@
-package com.datastructure.programs.tree;
+package com.datastructur.programs.tree;
 
 import java.util.ArrayList;
 import java.util.List;

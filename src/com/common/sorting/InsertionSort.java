@@ -16,7 +16,7 @@ public class InsertionSort {
 		
 		System.out.println("Given Array is ........");		
 		for ( int i=0; i<a.length; i++) {
-			System.out.print(" || " + a[i]);
+			System.out.print(" | " + a[i]);
 		}
 		
 		int nextIndex ;
@@ -36,7 +36,7 @@ public class InsertionSort {
 		
 		System.out.println("\n \n Sorted elements are...."   );
 		for ( int i=0; i<a.length; i++) {
-			System.out.print(" || " + a[i]);
+			System.out.print(" | " + a[i]);
 		}
 	}
 	

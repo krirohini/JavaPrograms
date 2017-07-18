@@ -18,10 +18,10 @@ public class CountingWordsInString {
 		StringTokenizer st = new StringTokenizer(str," ");
 		
 		while(st.hasMoreElements()){
-			System.out.println(st.nextElement());
+			System.out.print(st.nextElement() + " | ");
 			count++;
 		}		
-		System.out.println("Total word count is .. " +count);		
+		System.out.println("\nTotal word count is .. " +count);		
 	}
 	
 	//Using For Loop
@@ -45,7 +45,7 @@ public class CountingWordsInString {
 	public static void main(String[] args) {
 		CountingWordsInString word = new CountingWordsInString();
 		word.getStringAndWordCountUsingStringTokenizer(" My name is rohini");
-		System.out.println(word.getWordCount("    My   name    is rohini kumari   "));
+		//System.out.println(word.getWordCount(" My name is rohini kumari   "));
 
 	}
 

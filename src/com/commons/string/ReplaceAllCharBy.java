@@ -1,5 +1,7 @@
 package com.commons.string;
 
+import java.util.StringTokenizer;
+
 public class ReplaceAllCharBy {
 
 	public void replaceCharBy(String  givenStr) {
@@ -31,13 +33,29 @@ public class ReplaceAllCharBy {
 			}			
 		}		
 	}
+	
+	public void replaceCharByUsingStringTokenier(String str){
+		int count=0;
+		StringBuffer strBf = new StringBuffer();		
+		StringTokenizer strTk = new StringTokenizer(str, " ");
+		
+		System.out.println("Given String ....  " + str + " \n");
+		
+		while(strTk.hasMoreElements()){
+			count++;
+			strBf.append("%20").append(strTk.nextElement());
+		}
+		System.out.println("After Replacing ..  " + strBf + " \n");
+		System.out.println("Total Words are .. " + count + " \n");
+		
+	}
 
 	public static void main(String[] args) {
 		
-		ReplaceAllCharBy obj = new ReplaceAllCharBy();
+		ReplaceAllCharBy obj = new ReplaceAllCharBy();		
+		//obj.replaceCharBy("rohini kumari");
 		
-		
-		obj.replaceCharBy("rohini kumari");
+		obj.replaceCharByUsingStringTokenier(" rohini kumari I live in  ");
 
 	}
 

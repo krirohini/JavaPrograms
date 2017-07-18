@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.datastructure.programs.tree;
+package com.datastructur.programs.tree;
 
 
 public class BinaryTreeDemo {

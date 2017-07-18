@@ -3,8 +3,9 @@
  */
 package com.commons.string;
 
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
 
@@ -14,33 +15,56 @@ import java.util.StringTokenizer;
  */
 public class LongestSubString {
 
-	public String longestString(String str) {
-		System.out.println("Given String is .. " + str);
-		// int count=0;
+	public List<String> longestString(String str) {
+		System.out.println("Given String is ..  " + str);
 
-		Map<String, Integer> map = new HashMap<String, Integer>();
+		Map<Integer, List<String>> map = new HashMap<>();
 
 		StringTokenizer st = new StringTokenizer(str, " ");
 
 		while (st.hasMoreElements()) {
 			String tempStr = (String) st.nextElement();
-			map.put(tempStr, tempStr.length());
-			/* System.out.println(st.nextElement()); */
-			// count++;
+			int tempStrLength = tempStr.length();
+
+			List<String> list = null;
+			if (map.containsKey(tempStrLength)) {
+				list = map.get(tempStrLength);
+				if (null == list) {
+					list = new ArrayList<>();
+				}
+				list.add(tempStr);
+			} else {
+				list = new ArrayList<>();
+				list.add(tempStr);
+				map.put(tempStrLength, list);
+			}
 		}
+		
+		Integer maxLen = 0;
+		for (Integer val : map.keySet()) {
+			if (val > maxLen) {
+				maxLen = val;
+			}
+		}
+		return map.get(maxLen);
 
-		/*
-		 * while(map.get(key) if(ma) }
-		 */
-
-		return null;
 	}
 
-	
+	/*
+	 * public int findMax(int[] a) { 
+	 * 		int max = a[0]; 
+	 * 		for (int j = 1; j < size; j++) { 
+	 * 			if (a[j] > max) { max = a[j]; } 
+	 * 		} 
+	 * return max; 
+	 * }
+	 */
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		LongestSubString obj = new LongestSubString();
+		List<String> strList = obj.longestString("This is Rohi Kuma and I live in San Jose ");
+		System.out.println("\n" + strList.toString());
 	}
 
 }

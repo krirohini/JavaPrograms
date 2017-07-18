@@ -11,21 +11,13 @@ public class StringAnagram {
 
 	public Map<Character, Integer> charCounterA = new HashMap<Character, Integer>();
 	public Map<Character, Integer> charCounterB = new HashMap<Character, Integer>();
-    //public int counter = 0;
-	
+    	
 	public String checkAnagram(String A, String B) {
 	
 		int length = A.length();
 		int counterA = 0;
 		int counterB = 0;
-		int j=length-1;
 		
-		//charCounterA.put(, value)
-		
-		/*do{
-			charCounter.put(A.charAt(i), counter);
-			if(charCounter.containsKey(charAt)
-		}*/
 		for(int i=0; i<length ; i++) {
 			//charCounterA.put(key, value)
 			charCounterA.put(A.charAt(i), counterA);

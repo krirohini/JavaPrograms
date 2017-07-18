@@ -80,6 +80,7 @@ public class LinkedListImpl {
 		return count;
 	}
 	
+
 	public void reverseList() {
 		Node preNode=null;
 		Node curNode=head;
