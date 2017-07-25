@@ -4,7 +4,7 @@
 package com.common.programs.array;
 
 
-public class SamsungCodingTest {
+public class SSCodingTest {
 
 	private static int largestNumber(int data) {
 	    int num = data;
