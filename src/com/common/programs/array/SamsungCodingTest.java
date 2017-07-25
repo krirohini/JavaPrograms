@@ -74,7 +74,7 @@ public class SSCodingTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		System.out.println(SamsungCodingTest.largestNumber(0));
+		System.out.println(SSCodingTest.largestNumber(0));
 		int [] a  = { 5,4,-3,5,-3,4,-3,4,-3}; 
 //		int [] a  = { 5,4,-3,4,-3,5,-3,5}; 
 		int range = test2(a);
