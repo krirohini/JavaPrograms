@@ -1,0 +1,40 @@
+package com.common/programs/string;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class LongestSubString {
+
+	
+  
+	
+	public int lengthOfLongestSubstring(String s) {
+        int ans = 0 , len = s.length();
+        int i = 0, j = 0; 
+        Set <Character> set = new HashSet<>();
+        
+        while( i < len & j < len) {
+            if(!set.contains(s.charAt(j))) {
+                set.add(s.charAt(j++));
+                ans = Math.max(ans , j-i);
+            } else {
+                set.remove(s.charAt(i++));
+            }
+        }
+        
+        return ans; 
+    }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LongestSubString obj = new LongestSubString();
+		String str_1 = "au";
+		String str_2 = "abcabcbb";
+		String str_3 = "aubc7";
+		System.out.println("\n......longestSubString.....having length of....." + obj.lengthOfLongestSubstring(str_1));
+		System.out.println("\n......longestSubString.....having length of....." + obj.lengthOfLongestSubstring(str_2));
+		System.out.println("\n......longestSubString.....having length of....." + obj.lengthOfLongestSubstring(str_3));
+
+	}
+
+}
