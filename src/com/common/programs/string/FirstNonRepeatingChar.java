@@ -1,4 +1,4 @@
-	package com.commons.string;
+package com.commons.string;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,35 +10,29 @@ import java.util.Map;
 
 public class FirstNonRepeatingChar {
 
-	public void getFirstNonRepeatingChar(String givenString){
+	public char firstNonRptChar(String givenString) throws NullPointerException {
 		Map<Character, Integer> map = new HashMap<>();
-		if(givenString.length()==0){
-			System.out.println("Empty String ... Try Again");
-		}else {
-			for(int i=0; i<givenString.length(); i++){
-				char c = givenString.charAt(i);
-				if( map.containsKey(c)) {
-					int count = map.get(c)+1;
-					map.put(c,count );	
-				}else {
-					map.put(c,1);
+		List<Integer> indexes = new ArrayList<Integer>();
+		if(givenString.length()!= 0) {
+			for(int i=0; i<givenString.length(); i++) {
+				char currentChar = givenString.charAt(i);
+				if(!map.containsKey(currentChar)) {
+					map.put(currentChar, i);
 				}
 			}
-			
-			for(int i=0; i < givenString.length(); i++ ){
-				char thisChar = givenString.charAt(i);
-				int cnt = map.get(thisChar);
-				if(cnt == 1){
-					System.out.println("First Non Repeating Chracter of the String.. "+givenString + " is ..." + thisChar);
-					break;	
-				}
-			}			
 		}
+		indexes = new ArrayList<Integer>(map.values());
+		Collections.sort(indexes);
+		System.out.println(".....indexes....." + indexes);
+
+		return givenString.charAt(indexes.get(0));
 	}
 	
 	public static void main(String[] args) {
 		FirstNonRepeatingChar obj = new FirstNonRepeatingChar();
-		obj.getFirstNonRepeatingChar("ssress");
+		System.out.println(".....firstNonRptChar....." + obj.firstNonRptChar2("! ythy "));
+		System.out.println(".....firstNonRptChar....." + obj.firstNonRptChar2("ssress "));
+		
 	}
 
 }
